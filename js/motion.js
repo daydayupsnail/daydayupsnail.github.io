@@ -188,6 +188,7 @@ $(document).ready(function () {
       var $subtitle = $('.site-subtitle');
       var $logoLineTop = $('.logo-line-before i');
       var $logoLineBottom = $('.logo-line-after i');
+      var $customLogoImage2 = $('.custom-logo-image2');
 
       $brand.size() > 0 && sequence.push({
         e: $brand,
@@ -211,6 +212,12 @@ $(document).ready(function () {
         e: $subtitle,
         p: {opacity: 1, top: 0},
         o: {duration: 200}
+      });
+      
+      hasElement($customLogoImage2) && sequence.push({
+        e: $customLogoImage2,
+        p: {opacity: 1, top: 0},
+        o: { duration: 200 }
       });
 
       if (sequence.length > 0) {
