@@ -1005,7 +1005,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c27062;
+  background: #b90866;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -1209,8 +1209,8 @@ body {
   padding: 0 20px;
   font-size: 15px;
   color: #fff;
-  background: #222;
-  border: 2px solid #222;
+  background: #18673c;
+  border: 2px solid #18673c;
   text-decoration: none;
   transition-property: background-color;
   transition-duration: 0.2s;
@@ -1218,7 +1218,7 @@ body {
   transition-delay: 0s;
 }
 .btn:hover {
-  border-color: #222;
+  border-color: #18673c;
   color: #222;
   background: #fff;
 }
