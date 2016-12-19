@@ -1,0 +1,771 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="9jVhwYcqKg" />
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="react,yeoman,note,es6," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x5B66;&amp;#x4E60;&amp;#x8FDB;&amp;#x884C;&amp;#x4E2D;&amp;#xFF0C;&amp;#x968F;&amp;#x624B;&amp;#x7684;note">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react随手note">
+<meta property="og:url" content="http://daydayupsnail.github.io/react/react-note/index.html">
+<meta property="og:site_name" content="snail's garden">
+<meta property="og:description" content="&amp;#x5B66;&amp;#x4E60;&amp;#x8FDB;&amp;#x884C;&amp;#x4E2D;&amp;#xFF0C;&amp;#x968F;&amp;#x624B;&amp;#x7684;note">
+<meta property="og:updated_time" content="2016-12-19T06:47:26.902Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react随手note">
+<meta name="twitter:description" content="&amp;#x5B66;&amp;#x4E60;&amp;#x8FDB;&amp;#x884C;&amp;#x4E2D;&amp;#xFF0C;&amp;#x968F;&amp;#x624B;&amp;#x7684;note">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> react随手note | snail's garden </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?825906f4d62beae168be3202b6499f56";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+   
+    <img class="custom-logo-image2" src="/images/default_avatar.jpg"  
+               alt="snail's garden"/> 
+  
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">snail's garden</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我在爬啊爬~</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu false">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-code fa-fw"></i> <br />
+            
+            demo
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                react随手note
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-12-16T12:02:28+08:00" content="2016-12-16">
+              2016-12-16
+            </time>
+          </span>
+          
+
+          <span class="post-update">
+            &nbsp; | &nbsp;更新于
+            <time itemprop="dateUpdated" datetime="2016-12-19T14:47:26+08:00" content="2016-12-19">
+              2016-12-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/react/react-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="react/react-note/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>&#x5B66;&#x4E60;&#x8FDB;&#x884C;&#x4E2D;&#xFF0C;&#x968F;&#x624B;&#x7684;note<br><a id="more"></a></p>
+<h2 id="note"><a href="#note" class="headerlink" title="note"></a>note</h2><p>&#x7EC4;&#x4EF6;&#x7C7B;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x5FC5;&#x987B;&#x5927;&#x5199;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x6BD4;&#x5982;HelloMessage&#x4E0D;&#x80FD;&#x5199;&#x6210;helloMessage&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x7EC4;&#x4EF6;&#x7C7B;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x9876;&#x5C42;&#x6807;&#x7B7E;&#xFF0C;&#x5426;&#x5219;&#x4E5F;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<p>&#x6DFB;&#x52A0;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5C31;&#x662F; class &#x5C5E;&#x6027;&#x9700;&#x8981;&#x5199;&#x6210; className &#xFF0C;for &#x5C5E;&#x6027;&#x9700;&#x8981;&#x5199;&#x6210; htmlFor &#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; class &#x548C; for &#x662F; JavaScript &#x7684;&#x4FDD;&#x7559;&#x5B57;&#x3002;</p>
+<p>react developer tool &#x6839;&#x636E;&#x5168;&#x5C40;&#x53D8;&#x91CF;<br> <strong>REACT_DEVTOOLS_GLOBAL_HOOK</strong><br>&#x4E0E;&#x6D4F;&#x89C8;&#x5668; &#x901A;&#x4FE1;</p>
+<p>&#x770B;&#x5230;&#x4E86;  <a href="http://www.imooc.com/video/11743" target="_blank" rel="external">http://www.imooc.com/video/11743</a> 16min<br>&#x6BD4;&#x8F83;<br><a href="https://github.com/3terrace/gallery-by-react/tree/master/src/styles" target="_blank" rel="external">https://github.com/3terrace/gallery-by-react/tree/master/src/styles</a><br>&#x7FFB;&#x8F6C;&#x52A8;&#x753B;&#x4E0D;&#x592A;&#x5BF9;</p>
+<h2 id="&#x6027;&#x80FD;"><a href="#&#x6027;&#x80FD;" class="headerlink" title="&#x6027;&#x80FD;"></a>&#x6027;&#x80FD;</h2><p>react &#x5728;&#x4F20;&#x5165; &#x6570;&#x7EC4; &#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x65F6;&#x3002;&#x6570;&#x7EC4;&#x662F;&#x5B50; component<br>&#x90A3;&#x4E48;&#xFF0C;&#x9700;&#x8981;&#x82B1;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x6BD4;&#x8F83; verture dom &#x7684;&#x4E0D;&#x540C;&#x3002;<br>&#x7136;&#x540E;&#x4FEE;&#x6539;&#x503C;&#x3002;<br>&#x7ED9;&#x6BCF;&#x4E00;&#x4E2A;component &#x6DFB;&#x52A0;key &#x80FD;&#x591F;&#xFF0C;&#x66F4;&#x5FEB;&#x7684;&#x627E;&#x5230;&#x5143;&#x7D20;</p>
+<h2 id="&#x8C03;&#x8BD5;"><a href="#&#x8C03;&#x8BD5;" class="headerlink" title="&#x8C03;&#x8BD5;"></a>&#x8C03;&#x8BD5;</h2><p>&#x5728; js &#x91CC; &#x52A0;&#x4E0A;<br>debugger;<br>&#x5373;&#x53EF;&#x5728;&#x6B64;&#x6DFB;&#x52A0;&#x65AD;&#x70B9;&#xFF0C;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;<br>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x76F4;&#x63A5;&#x6253;&#x65AD;&#x70B9;&#xFF0C;&#x5237;&#x65B0;&#x5C31;&#x6CA1;&#x7528;&#x4E86;</p>
+<p>debugger &#x5728; .eslintrc ,rules&#x6DFB;&#x52A0;<br> &#x201C;no-debugger&#x201D;: 1,<br> 0: off<br> 1: warn<br> 2: error<br>&#x5728;&#x751F;&#x4EA7;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5220;&#x9664;&#x8FD9;&#x53E5;&#x8BDD;</p>
+<h2 id="es6&#x7248;&#x672C;"><a href="#es6&#x7248;&#x672C;" class="headerlink" title="es6&#x7248;&#x672C;"></a>es6&#x7248;&#x672C;</h2><h3 id="&#x6CA1;&#x6709;getInitialState"><a href="#&#x6CA1;&#x6709;getInitialState" class="headerlink" title="&#x6CA1;&#x6709;getInitialState"></a>&#x6CA1;&#x6709;getInitialState</h3><p>let app = React.createClass({<br>    getInitialState: function(){<br>        // some thing<br>    }<br>})<br>&#x7136;&#x540E;&#x4E5F;&#x770B;&#x5230;&#x7528; React.Component&#xFF0C;&#x4E8E;&#x662F;</p>
+<p>class TodoApp extends React.Component{<br>    getInitialState(){<br>         // some thing<br>    }<br>}<br>&#x540E;&#x8005;&#x6CA1;&#x6709; getInitialState<br>&#x8981;&#x5728; constructor &#x58F0;&#x660E;<br>constructor(props) {<br>    super(props)<br>    this.state = {<br>    };<br>  }</p>
+<h3 id="child-has-key"><a href="#child-has-key" class="headerlink" title="child has key"></a>child has key</h3><p>react&#x62A5;&#x9519;Each child in an array or iterator should<br>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;key &#x83B7;&#x53D6; &#x5B9E;&#x9645;dom&#x5417;</p>
+<h3 id="react2-default-findDOMNode"><a href="#react2-default-findDOMNode" class="headerlink" title="_react2.default.findDOMNode"></a>_react2.default.findDOMNode</h3><p>is not a function<br>-&#x5F15;&#x5165; ReactDOM<br>&#x4F7F;&#x7528;.findDOMNode<br>-&#x6216;&#x8005;<br> you don&#x2019;t need findDOMNode to use refs at all:<br>this.refs.brand.value<br>is sufficient.</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x65F6;ref&#x7ED1;&#x5B9A;&#x7684;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x4E5F;&#x662F;component&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x7684;&#xFF0C;&#x4E0D;&#x662F;dom&#xFF0C;&#x800C;&#x662F;react componennt&#x3002;<br>&#x5728;&#x5B50;&#x8282;&#x70B9;&#x4E0A;&#x7ED1;&#x5B9A;ref&#x3002;&#x624D;&#x80FD;&#x83B7;&#x53D6;&#x5B50;&#x8282;&#x70B9;&#x771F;&#x5B9E;dom&#x3002;<br>&#x5728;&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x7528;findDOWNode &#x662F;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5B50;&#x8282;&#x70B9;&#x7684;</p>
+<h3 id="component-&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5305;&#x542B;&#x5C5E;&#x6027;"><a href="#component-&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5305;&#x542B;&#x5C5E;&#x6027;" class="headerlink" title="component &#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5305;&#x542B;&#x5C5E;&#x6027;"></a>component &#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5305;&#x542B;&#x5C5E;&#x6027;</h3><p>ES6&#x4E2D;&#x3001;class&#x7684;&#x4E3B;&#x4F53;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x6570;&#x636E;&#x5C5E;&#x6027;<br>&#x5728;constructor &#x7528;this &#x58F0;&#x660E;</p>
+<h3 id="&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;this&#x6307;&#x5411;"><a href="#&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;this&#x6307;&#x5411;" class="headerlink" title="&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;this&#x6307;&#x5411;"></a>&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;this&#x6307;&#x5411;</h3><p>&#x5728;&#x4F7F;&#x7528;React&#x4E2D; &#x5982;&#x679C;&#x4F7F;&#x7528;ES6&#x7684;Class extends&#x5199;&#x6CD5; &#x5982;&#x679C;onClick&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; &#x9700;&#x8981;bind(this)&#x3002;&#x5982;&#x4E0B;<br> onClick={<br>        this.handleClick.bind(this)<br>      }<br>&#x800C;&#x4F7F;&#x7528;React.createClass&#x65B9;&#x6CD5; &#x5C31;&#x4E0D;&#x9700;&#x8981;.<br>&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x7684;React&#x81EA;&#x52A8;&#x7ED1;&#x5B9A;&#x4E86;this&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x5199;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x4E0D;&#x90FD;&#x662F;&#x9700;&#x8981;&#xFF0C;&#x7ED9;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#xFF0C;&#x91CD;&#x65B0;&#x7ED1;&#x5B9A;this&#x7684;&#x4E48;&#x3002;</p>
+<h3 id="&#x52A0;css&#x524D;&#x7F00;"><a href="#&#x52A0;css&#x524D;&#x7F00;" class="headerlink" title="&#x52A0;css&#x524D;&#x7F00;"></a>&#x52A0;css&#x524D;&#x7F00;</h3><p>[&#x2018;-moz-&#x2018;,&#x2019;-ms-&#x2018;,&#x2019;-webkit-&#x2018;,&#x2019;&#x2019;]<br>&#x5728;js&#x91CC;&#x5382;&#x5546;&#x524D;&#x7F00;&#x8981;&#x5411;&#x4E0B;&#x9762;&#x52A0;<br>[&#x2018;MozTransform&#x2019;,&#x2019;msTransform&#x2019;,&#x2019;WebkitTransform&#x2019;,&#x2019;WebkitT&#x2019;,&#x2019;transform&#x2019;]<br>&#x76F4;&#x63A5;&#x628A;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8D4B;&#x503C;&#x7ED9;style&#x3002;&#x5F97;&#x6309;&#x7167;js &#x7684;&#x683C;&#x5F0F;</p>
+<h2 id="&#x5B66;&#x4E60;&#x5730;&#x5740;"><a href="#&#x5B66;&#x4E60;&#x5730;&#x5740;" class="headerlink" title="&#x5B66;&#x4E60;&#x5730;&#x5740;"></a>&#x5B66;&#x4E60;&#x5730;&#x5740;</h2><p><a href="http://www.ruanyifeng.com/blog/2015/02/future-of-dom.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/02/future-of-dom.html</a><br><a href="http://react-china.org/t/react-js/398" target="_blank" rel="external">http://react-china.org/t/react-js/398</a><br><a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/03/react.html</a><br><a href="https://facebook.github.io/react/docs/events.html#supported-events" target="_blank" rel="external">https://facebook.github.io/react/docs/events.html#supported-events</a><br><a href="http://www.imooc.com/learn/507" target="_blank" rel="external">http://www.imooc.com/learn/507</a><br><a href="http://www.oschina.net/news/75530/9-things-every-reactjs-beginner-should-know" target="_blank" rel="external">http://www.oschina.net/news/75530/9-things-every-reactjs-beginner-should-know</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/react/" rel="tag">#react</a>
+          
+            <a href="/tags/yeoman/" rel="tag">#yeoman</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/es6/" rel="tag">#es6</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/fis3/fis3-detail/" rel="next" title="fis3项目搭建详解">
+                <i class="fa fa-chevron-left"></i> fis3项目搭建详解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/jsconponent/component-zoombox/" rel="prev" title="zoom 放大组件">
+                zoom 放大组件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="react/react-note/"
+           data-title="react随手note" data-url="http://daydayupsnail.github.io/react/react-note/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="snail" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">snail</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">前端,蜗牛</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/daydayupsnail" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#note"><span class="nav-number">1.</span> <span class="nav-text">note</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性能"><span class="nav-number">2.</span> <span class="nav-text">性能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">3.</span> <span class="nav-text">调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#es6版本"><span class="nav-number">4.</span> <span class="nav-text">es6版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#没有getInitialState"><span class="nav-number">4.1.</span> <span class="nav-text">没有getInitialState</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#child-has-key"><span class="nav-number">4.2.</span> <span class="nav-text">child has key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#react2-default-findDOMNode"><span class="nav-number">4.3.</span> <span class="nav-text">_react2.default.findDOMNode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#component-不能直接包含属性"><span class="nav-number">4.4.</span> <span class="nav-text">component 不能直接包含属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件绑定，this指向"><span class="nav-number">4.5.</span> <span class="nav-text">事件绑定，this指向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加css前缀"><span class="nav-number">4.6.</span> <span class="nav-text">加css前缀</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习地址"><span class="nav-number">5.</span> <span class="nav-text">学习地址</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">snail</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/HelloYu/hexo-theme-zero">
+    Zero
+  </a>
+</div>
+
+
+  <script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';  
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"daydayupsnail"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+          processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
+
+
+  
+  
+
+</body>
+</html>
