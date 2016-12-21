@@ -1,0 +1,76 @@
+<style type="text/css">.topnav{color:#fff;background:url(__relative("/web/images/index/nav-bg.png")) repeat-x}.topnav ul li{position:relative;height:39px;line-height:39px;width:110px;font-size:16px;z-index:1;border-right:1px #ba9051 solid}.topnav ul li.last{border-right:0;width:114px}.topnav ul li.on,.topnav ul li.hason{}.topnav ul li a:hover{text-decoration:none;background:#c6b384}.topnav li .child{position:absolute;top:39px;left:0;background:#BEB094;display:none;width:100%}.topnav a,.topnav a:hover{color:#fff}.topnav li .child a{display:block;line-height:16px;padding:13px 23px;line-height:13px;background:#c4a862;width:auto;height:auto}.topnav li.columbia .child{padding-top:0;width:221px;text-align:left}.topnav li.columbia a.columbia{line-height:23px;padding-top:6px;padding-bottom:26px}.topnav li .child a:hover{background:#d2bb6c}</style>
+<div class="nav topnav clearfix">
+  <ul>
+    <li class="hason"><a href="./index.html"  target="_blank">首页</a>
+    </li>
+    <li class="haschild"><a href="./president_speech.html" target="_blank">关于我们</a>
+    </li>
+    <li class="columbia"><a href="./project_classification_finance.html">教学项目</a>
+      <div class="child">
+        <a href="./project_classification_finance.html" target="_blank">金融硕士</a>
+        <a href="./project_classification_account.html" target="_blank">会计硕士</a>
+        <a href="./project_classification_manage.html" target="_blank">管理硕士</a>
+        <a href="./project_classification_columbia.html" target="_blank" class="columbia">清华大学-哥伦比亚大学商务分析硕士双学位</a>
+      </div>
+    </li>
+    <li class="columbia"><a href="./cultivation_system_finance.html"  target="_blank">培养体系</a>
+      <div class="child">
+        <a href="./cultivation_system_finance.html" target="_blank">金融硕士</a>
+        <a href="./cultivation_system_account.html" target="_blank">会计硕士</a>
+        <a href="./cultivation_system_manage.html" target="_blank">管理硕士</a>
+        <a href="./cultivation_system_columbia.html" target="_blank" class="columbia">清华大学-哥伦比亚大学商务分析硕士双学位</a>
+      </div>
+    </li>
+    <li class="columbia"><a href="./project_teacher_finance.html"  target="_blank">项目师资</a>
+      <div class="child">
+        <a href="./project_teacher_finance.html" target="_blank">金融硕士</a>
+        <a href="./project_teacher_account.html" target="_blank">会计硕士</a>
+        <a href="./project_teacher_manage.html" target="_blank">管理硕士</a>
+        <a href="./project_teacher_columbia.html" target="_blank" class="columbia">清华大学-哥伦比亚大学商务分析硕士双学位</a>
+      </div>
+    </li>
+    <li><a href="./international_culture.html" target="_blank" target="_blank">全球视野</a>
+    </li>
+    <li><a href="./employment_census.html" target="_blank">职业发展</a>
+    <li><a href="./enrollment_rule.html" target="_blank">招生信息</a>
+      <div class="child">
+        <a href="./enrollment_rule.html" target="_blank">招生简章</a>
+        <a href="./enrollment_flow.html" target="_blank">招生流程</a>
+        <a href="./material_down.html" target="_blank">资料下载</a>
+        <a href="./project_video.html" target="_blank">项目视频</a>
+        <a href="./frequent_question.html" target="_blank">常见问题</a>
+        <a href="./contact_us.html" target="_blank">联系我们</a>
+      </div>
+    </li>
+    <li class="last"><a href="./contact_us.html"  target="_blank">联系方式</a>
+    </li>
+  </ul>
+</div>
+<script type="text/javascript">/*导航条*/
+$(function(){
+  $(".nav ul li").hover(function(){
+    $(this).addClass("on");
+  },function(){
+    $(this).removeClass("on");
+  });
+  
+  $('.topnav ul li').hover(
+    function(){
+        if($(this).find('.child').width()&&$(this).children('a').width()){
+            if($(this).children('a').width()>$(this).find('.child').width()){
+                $(this).find('.child').css('width',($(this).children('a').width()+20));
+            }else{
+
+            }
+        }
+        $(this).find('.child').stop(true,true).slideDown();
+        //
+   },
+   function(){
+        $(this).find('.child').stop(true,true).slideUp();
+
+   });
+
+});</script>
+      
+      
